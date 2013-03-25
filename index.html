@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+
+<head>
+<meta charset="utf-8">
+<title>SMPL - A small responsive framework</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<link rel="stylesheet" href="css/landing.css">
+
+
+</head>
+
+<body>
+
+	<header class="hero">
+		<div class="wrap">
+			<h1 class="site-header">This is <strong>SMPL</strong></h1>
+			<p class="site-header-desc">a non-intrusive css framework that respects your design</p>
+			<p class="primary-action"><a href="#" class="btn">download on GitHub</a></p>
+			<address class="contact"><a href="http://jaredcunha.com">created by jared cunha</a></address>
+		</div>
+	</header>
+
+	<div class="section section-about">
+		<div class="wrap">
+			<div class="container cols-1-3 the-pitch">
+				<div class="col-item col-item-1">
+					<h2 class="pitch-head">Powered by SASS</h2>
+					<p>All grid properties use SASS mixins, so you can use the framework classes or apply your own.</p>
+				</div><!-- end: .col-item -->
+				<div class="col-item col-item-2">
+					<h2 class="pitch-head">Fits Your Grid</h2>
+					<p>Most CSS frameworks are built with a pre-defined grid. Your site is unique and SMPL won't get in the way.</p>
+				</div><!-- end: .col-item -->
+				<div class="col-item col-item-3">
+					<h2 class="pitch-head">Fully Customizable</h2>
+					<p>SMPL includes a few common layout divisions. It's your site, so you set your own breakpoints. </p>
+				</div><!-- end: .col-item -->
+			</div> <!-- end: .cols-1-2-4 -->
+		</div>	<!-- end: .wrap -->
+	</div> <!-- end: .section-about -->
+
+	<div class="section section-demo">
+		<div class="wrap">
+			<h2 class="section-head">Demonstration</h2>
+			<p class="section-desc">SMPL uses class names that describe behaviors rather than column counts on a predefined grid.</p>
+
+			<div class="cols-1-2 demo-group">
+				<div class="col-item col-item-1">1</div>
+				<div class="col-item col-item-2">2</div>
+			</div> <!-- end: .cols-1-2 -->
+
+
+			<div class="cols-1-3 demo-group">
+				<div class="col-item col-item-1">1</div>
+				<div class="col-item col-item-2">2</div>
+				<div class="col-item col-item-3">3</div>
+			</div> <!-- end: .cols-1-2-4 -->
+
+
+			<div class="cols-1-2-4 demo-group">
+				<div class="col-item col-item-1">1</div>
+				<div class="col-item col-item-2">2</div>
+				<div class="col-item col-item-3">3</div>
+				<div class="col-item col-item-4">4</div>
+			</div> <!-- end: .cols-1-2-4 -->
+
+			<div class="cols-1-2-w-emph demo-group">
+				<div class="col-item col-item-1 col-major">1</div>
+				<div class="col-item col-item-2">2</div>
+			</div> <!-- end: .cols-1-2 -->
+
+			<div class="cols-1-2-3-6 demo-group">
+				<div class="col-item col-item-1">1</div>
+				<div class="col-item col-item-2">2</div>
+				<div class="col-item col-item-3">3</div>
+				<div class="col-item col-item-4">4</div>
+				<div class="col-item col-item-5">5</div>
+				<div class="col-item col-item-6">6</div>
+			</div> <!-- end: .cols-1-2-4 -->
+
+			<div class="cols-1-2 demo-group">
+				<div class="col-item col-item-1">1</div>
+				<div class="col-item col-item-2 demo-nested">
+					<div class="cols-1-2 demo-group">
+						<div class="col-item col-item-1">Nested 1</div>
+						<div class="col-item col-item-2">Nested 2</div>
+					</div> <!-- end: .cols-1-2 -->
+				</div>
+			</div> <!-- end: .cols-1-2 -->
+		</div> <!-- end: .wrap -->
+	</div><!-- end: .section-demo -->
+
+
+	<div class="section section-definitions">
+		<div class="wrap">
+			<h2 class="section-head">Getting Started</h2>
+			<p class="section-desc"><strong>What it is: </strong>Intentionally limited. Common divisions included, but you should add what you need. <strong>What it isn’t: </strong>This framework was not built to establish an entire site. It is a small set of class and SASS mixins to get you on your way.</p>
+
+			
+			<div class="subsection">
+				<h3 class="subsection-head">Step 1. Apply your grid columns and gutters</h3>
+					<div class="cols-1-2-w-emph">
+						<div class="col-item col-item-1 col-major">
+							<pre class="code-example"><ol><li><span class="comment">/* Gutters */</span></li><li>$gutterWidth: 1.454545454%;</li><li></li><li><span class="comment">/* Equal Columns */</span></li><li>$halves: 49.272727272%;</li><li>$thirds: 32.363636363%;</li><li>$quarters: 23.909090909%;</li><li>$sixths: 15.454545454%;</li></ol></pre>
+						</div><!-- end: .col-item -->
+						<div class="col-item col-item-2 code-descriptor">
+							<p>Calculate some percentages for gutters and equal column divisions at the widest width of your grid and plug them into the provided SASS variables. You can even add your own. </p>
+						</div><!-- end: .col-item -->
+				</div> <!-- end: .cols-1-2-w-emph-->
+
+				<div class="cols-1-2-w-emph">
+						<div class="col-item col-item-1 col-major">
+							<pre class="code-example"><ol><li><span class="comment">/* Set some divisions */</span></li><li>@mixin twoCols {</li><li>   width: $halves;</li><li>   margin-right: $gutterWidth;</li><li>}</li><li>@mixin fourCols {</li><li>   width: $quarters;</li><li>   margin-right: $gutterWidth;</li><li>}</li><li></li><li><span class="comment">/* 1 Column -> 2 Columns -> 4 Columns */</span></li><li>@mixin colItem-1to2to4_Break1 {</li><li>   @include twoCols;</li><li>}</li><li>@mixin colItem-1to2to4_Break2 {</li><li>   @include fourCols;</li><li>}</li></ol></pre>
+						</div><!-- end: .col-item -->
+						<div class="col-item col-item-2 code-descriptor">
+							<p>Those variables will then apply to a series of mixins and includes that will be used in your site's breakpoints. At Break 1 (referring to the content’s first breakpoint), content will display in two columns. Break 2 will then display the content down further into four columns.  </p>
+						</div><!-- end: .col-item -->
+				</div> <!-- end: .cols-1-2-w-emph-->
+
+			</div> <!-- end: .subsection -->
+
+			<div class="subsection">
+				<h3 class="subsection-head">Step 2. The scaffolding</h3>
+				<div class="cols-1-2-w-emph">
+						<div class="col-item col-item-1 col-major">
+							<pre class="code-example"><ol><li>&lt;div class="cols-1-2-4"&gt;</li><li>  &lt;div class="col-item col-item-1"&gt;&lt;/div&gt;</li><li>  &lt;div class="col-item col-item-2"&gt;&lt;/div&gt;</li><li>  &lt;div class="col-item col-item-3"&gt;&lt;/div&gt;</li><li>  &lt;div class="col-item col-item-4"&gt;&lt;/div&gt;</li><li>&lt;/div&gt;</li></ol></pre>
+						</div><!-- end: .col-item -->
+						<div class="col-item col-item-2 code-descriptor">
+							<p>Parent class names describe exactly how the columns will expand. <span class="code">.cols-1-2-4</span> will go from 1 column, to 2 columns, to 4 columns.</p>
+						</div><!-- end: .col-item -->
+				</div> <!-- end: .cols-1-2-w-emph-->
+			</div> <!-- end: .subsection -->
+
+			<div class="subsection">
+				<h3 class="subsection-head">Step 3. Set some breakpoints</h3>
+				<div class="cols-1-2-w-emph">
+						<div class="col-item col-item-1 col-major">
+							<pre class="code-example"><ol><li><span class="comment">/* Expansion A =========== */</span><li>@media screen and (min-width: 600px) {</li><li>   .cols-1-2-4 .col-item {</li><li>      @include colItem-1to2to4_Break1;</li><li>   }</li><li>   .cols-1-2-4 .col-item-2,</li><li>   .cols-1-2-4 .col-item-4 {</li><li>      @include lastInRow;</li><li>   }</li><li>}</li><li></li><li><span class="comment">/* Expansion B =========== */</span><li>@media screen and (min-width: 900px) {</li><li>   .cols-1-2-4 .col-item {</li><li>      @include colItem-1to2to4_Break2;</li><li>   }</li><li>   .cols-1-2-4 .col-item-4 {</li><li>      @include lastInRow;</li><li>   }</li><li>}</li></ol></pre>
+						</div><!-- end: .col-item -->
+						<div class="col-item col-item-2 code-descriptor">
+							<p>In Expansion A, <span class="code">.cols-1-2-4</span> reaches Break 1, and content is displayed in two columns as defined in Step 1. In Expansion B, it reaches Break 2, and content is displayed in four columns.. The last item in each row should have the <span class="code">$lastInRow</span> include to remove right margins.</p>
+							<p>You should set your media queries to whatever your design requires.</p>
+						</div><!-- end: .col-item -->
+				</div> <!-- end: .cols-1-2-w-emph-->
+
+				<div class="cols-1-2-w-emph">
+						<div class="col-item col-item-1 col-major">
+							<pre class="code-example"><ol><li><span class="comment">/* Expansion A =========== */</span><li>@media screen and (min-width: 600px) {</li><li>   .photos-list .photo {</li><li>      @include colItem-1to2to4_Break1;</li><li>   }</li><li>   .photos-list .photo-2,</li><li>   .photos-list .photo-4 {</li><li>      @include lastInRow;</li><li>   }</li><li>}</li><li></li><li><span class="comment">/* Expansion B =========== */</span><li>@media screen and (min-width: 900px) {</li><li>   .photos-list .photo {</li><li>      @include colItem-1to2to4_Break2;</li><li>   }</li><li>   .photos-list .photo-4 {</li><li>      @include lastInRow;</li><li>   }</li><li>}</li></ol></pre>
+						</div><!-- end: .col-item -->
+						<div class="col-item col-item-2 code-descriptor">
+							<p>Also, if you’re not a fan of framework class names, you can always use the SASS includes with your own.</p>
+						</div><!-- end: .col-item -->
+				</div> <!-- end: .cols-1-2-w-emph-->
+			</div> <!-- end: .subsection -->
+			
+			
+			
+		</div> <!-- end: .wrap -->
+	</div> <!-- end: .section-definitions -->
+	
+	<footer>
+		<div class="wrap">
+			<p>SMPL was created by <a href="http://jaredcunha.com">Jared Cunha</a> and is available on <a href="#">GitHub</a></p>
+		</div>
+	</footer>
+
+	<script src="/scripts/scripts.js"></script>
+	
+
+</body>
+
+</html>

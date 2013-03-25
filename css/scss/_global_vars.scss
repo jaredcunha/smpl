@@ -1,0 +1,146 @@
+/* ==========================================================================
+   VARIABLES
+   ========================================================================== */
+/* Gutters */
+$gutterWidth: 1.454545454%;
+
+/*Equal Columns*/
+$halves: 49.272727272%;
+$thirds: 32.363636363%;
+$quarters: 23.909090909%;
+$sixths: 15.454545454%;
+
+/*Custom Divisions*/
+$splitMajor: 57.727272727%;
+$splitMinor: 40.818181818%;
+
+
+/* ==========================================================================
+   GENERAL MIXINS
+   ========================================================================== */
+/*Clearfix*/   
+@mixin clearfix {
+  &:after {
+    content: " "; 
+    display: table;
+    clear: both; 
+  }
+  &:before {
+    content: " "; 
+    display: table;
+  }
+  * html & { zoom: 1; }
+  *+html & { zoom: 1; }
+}
+
+
+
+
+/* ==========================================================================
+   GRID ITEMS
+   ========================================================================== */
+
+/* Equal column mixins */
+@mixin twoCols {
+	width: $halves;
+	margin-right: $gutterWidth;
+}
+
+@mixin threeCols {
+	width: $thirds;
+	margin-right: $gutterWidth;
+}
+
+@mixin fourCols {
+	width: $quarters;
+	margin-right: $gutterWidth;
+}
+
+@mixin sixCols {
+	width: $sixths;
+	margin-right: $gutterWidth;
+}
+
+
+
+/*Custom mixins*/
+@mixin twoColsMajor {
+	width: $splitMajor;
+	margin-right: $gutterWidth;
+}
+@mixin twoColsMinor {
+	width: $splitMinor;
+	margin-right: $gutterWidth;
+}
+
+
+
+/* Last in row */
+@mixin lastInRow {
+	margin-right: 0;
+}
+
+
+
+/* 1 Column -> 2 Columns (Unequal) ------------------------------------------------*/
+/* Break: 1 */
+ @mixin colItem-1to2Major_Break1 {
+	@include twoColsMajor;
+ }
+ @mixin colItem-1to2Minor_Break1 {
+	@include twoColsMinor;
+ }
+
+
+
+
+/* 1 Column -> 2 Columns ---------------------------------------------------------*/
+/* Break: 1 */
+ @mixin colItem-1to2_Break1 {
+	@include twoCols;
+ }
+
+
+
+
+
+/* 1 Column -> 3 Columns ---------------------------------------------------------*/
+/* Break: 1; */
+ @mixin colItem-1to3_Break1 {
+	@include threeCols;
+ }
+
+
+
+
+
+/* 1 Column -> 2 Columns -> 4 Columns ------------------------------------------*/
+/* Break: 1; */
+ @mixin colItem-1to2to4_Break1 {
+	@include twoCols;
+ }
+ /* Break: 2; */
+ @mixin colItem-1to2to4_Break2 {
+	@include fourCols;
+ }
+
+
+
+
+
+ /* 1 Column -> 2 Columns -> 3 Columns -> 6 Columns ----------------------------*/
+/* Break: 1*/
+ @mixin colItem-1to2to3to6_Break1 {
+	@include twoCols;
+ }
+ /* Break: 2; */
+ @mixin colItem-1to2to3to6_Break2 {
+	@include threeCols;
+ }
+ /* Break 3 */
+ @mixin colItem-1to2to3to6_Break3 {
+	@include sixCols;
+ }
+
+
+

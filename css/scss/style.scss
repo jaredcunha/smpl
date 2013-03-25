@@ -1,0 +1,164 @@
+/*!
+ * SMPL Framework
+ *
+ * http://jaredcunha.com
+ *
+ * Built by @jaredcunha
+ */
+
+/*	IMPORTS */
+@import "reset.scss";
+@import "global_vars.scss";
+
+
+
+/* ============================================================================
+	SMPL
+=============================================================================== */
+
+/* 
+	SCAFFOLDING
+======================================= */
+
+/*  BASICS____________________________________ */
+/**
+ * Universal Reset
+ */
+* {
+  box-sizing: border-box;
+  *behavior: url(/scripts/boxsizing.htc);
+}
+
+
+.cols-1-2,
+.cols-1-2-4,
+.cols-1-2-3-6,
+.cols-1-3,
+.cols-1-2-w-emph {
+	@include clearfix;
+}
+
+
+.col-item {
+	float: left;
+	width: 100%;
+}
+
+
+
+
+/* ==========================================================================
+   EXPANSION A
+   ========================================================================== */
+
+
+@media screen and (min-width: 600px) {
+	
+
+	/* 1 Column -> 2 Columns */
+	.cols-1-2 .col-item {
+		@include colItem-1to2_Break1;
+	}
+	.cols-1-2 .col-item-2 {
+		@include lastInRow;
+	}
+
+
+	/* 1 Column -> 2 Columns -> 4 Columns */
+	.cols-1-2-4 .col-item {
+		@include colItem-1to2to4_Break1;
+	}
+	.cols-1-2-4 .col-item-2,
+	.cols-1-2-4 .col-item-4 {
+		@include lastInRow;
+	}
+
+
+	/* 1 Column -> 2 Columns -> 3 Columns -> 6 Columns */
+	.cols-1-2-3-6 .col-item {
+		@include colItem-1to2to3to6_Break1;
+	}
+	.cols-1-2-3-6 .col-item-2,
+	.cols-1-2-3-6 .col-item-4,
+	.cols-1-2-3-6 .col-item-6 {
+		@include lastInRow;
+	}
+
+
+	/* 1 Column -> 2 Columns */
+	.cols-1-2-w-emph .col-item {
+		@include colItem-1to2Minor_Break1;
+	}
+	.cols-1-2-w-emph .col-item.col-major {
+		@include colItem-1to2Major_Break1;
+	}
+	.cols-1-2-w-emph .col-item-2 {
+		@include lastInRow;
+	}
+
+}
+
+
+
+/* ==========================================================================
+   EXPANSION B
+   ========================================================================== */
+
+
+@media screen and (min-width: 800px) {
+
+
+	/* 1 Column -> 3 Columns */
+	.cols-1-3 .col-item {
+		@include colItem-1to3_Break1;
+	}
+	.cols-1-3 .col-item-3 {
+		@include lastInRow;
+	}
+
+	/* 1 Column -> 2 Columns -> 4 Columns */
+	.cols-1-2-4 .col-item {
+		@include colItem-1to2to4_Break2;
+	}
+	.cols-1-2-4 .col-item-4 {
+		@include lastInRow;
+	}
+
+
+
+	/* 1 Column -> 2 Columns -> 3 Columns -> 6 Columns */
+	.cols-1-2-3-6 .col-item {
+		@include colItem-1to2to3to6_Break2;
+	}
+	.cols-1-2-3-6 .col-item-4 {
+		clear: left;
+	}
+	.cols-1-2-3-6 .col-item-3,
+	.cols-1-2-3-6 .col-item-6 {
+		@include lastInRow;
+	}
+	
+}
+
+
+
+
+/* ==========================================================================
+   EXPANSION C
+   ========================================================================== */
+@media screen and (min-width: 1000px) {
+
+	/* 1 Column -> 2 Columns -> 3 Columns -> 6 Columns */
+	.cols-1-2-3-6 .col-item {
+		@include colItem-1to2to3to6_Break3;
+	}
+	.cols-1-2-3-6 .col-item-4 {
+		clear: none;
+	}
+	.cols-1-2-3-6 .col-item-6 {
+		@include lastInRow;
+	}
+	
+}
+
+

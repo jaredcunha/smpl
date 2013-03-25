@@ -1,0 +1,544 @@
+/*!
+ * SMPL Framework
+ *
+ * http://jaredcunha.com
+ *
+ * Built by @jaredcunha
+ */
+
+/*	IMPORTS */
+@import "reset.scss";
+@import "global_vars.scss";
+
+
+
+/* ============================================================================
+	SMPL
+=============================================================================== */
+
+/* 
+	SCAFFOLDING
+======================================= */
+
+/*  BASICS____________________________________ */
+/**
+ * Universal Reset
+ */
+* {
+  box-sizing: border-box;
+  *behavior: url(/scripts/boxsizing.htc);
+}
+
+
+.cols-1-2,
+.cols-1-2-4,
+.cols-1-2-3-6,
+.cols-1-3,
+.cols-1-2-w-emph {
+	@include clearfix;
+}
+
+
+.col-item {
+	float: left;
+	width: 100%;
+}
+
+
+
+/* ==========================================================================
+   THE SITE
+   ========================================================================== */
+/*  VARIABLES____________________________________ */
+$darkGrey: #323232;
+$lightGrey: #a9a9a9;
+$lightestGrey: #e2e2e2;
+$primary: #7ce1cb;
+$primaryDark: #3cc7a2;
+$secondary: #d7755b;
+$secondaryDark: #b53620;
+
+
+
+
+body {
+	font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: $darkGrey;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+.wrap {
+	max-width: 1300px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+
+.btn {
+	color: #fff;
+	background: $secondary;
+	font-weight: bold;
+	border-bottom: 5px solid $secondaryDark;
+	padding: .5em 1em;
+	font-size: 2em;
+	text-align:center;
+}
+.btn:hover {
+	background: $secondaryDark;
+}
+
+.code {
+	font-weight: bold;
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+	color: $primaryDark;
+}
+
+/*  HERO____________________________________ */
+.hero {
+	background: $primary; 
+	color: white;
+	text-align: center;
+	position: relative;
+	border-bottom: 1em solid $primaryDark;
+	padding: 5em 0;
+}
+
+.primary-action {
+	position: absolute;
+	bottom: -1.2em;
+	margin: 0 auto;
+	text-align: center;
+	left: 0;
+	width: 100%;
+}
+
+.site-header {
+	font-size: 2em;
+	text-transform: lowercase;
+	line-height: 1;
+	margin: 0;
+}
+
+.site-header strong {
+	display:block;
+	font-size: 4em;
+	text-transform: uppercase;
+}
+
+.site-header-desc {
+	font-size:1.6em;
+	font-weight: bold;
+	margin:0;
+}
+
+.contact {
+	position: absolute;
+	top: 12px;
+	right: 6%;
+	font-style: normal;
+}
+.contact a {
+	color: #507f74;
+	font-size: 1.2em;
+}
+
+/*  SECTIONS____________________________________ */
+.section {
+	padding: 2em 0;
+	border-top: 1px solid $lightestGrey;
+}
+
+.section-head {
+	color: $secondaryDark;
+	font-size: 2em;
+}
+
+.section-desc {
+	font-size: 1.6em;
+	font-style: italic;
+	margin-bottom: 2em;
+}
+
+.subsection-head {
+	font-size:1.5em;
+	color: $secondary;
+}
+
+
+/*  PITCH____________________________________ */
+.the-pitch {
+	text-align:center;
+	padding-top: 2em;
+}
+
+.the-pitch .col-item {
+	padding: 0 2%;
+	margin-bottom: 3em;
+}
+
+.pitch-head {
+	font-size: 2em;
+	margin-bottom: .25em;
+}
+
+.the-pitch p {
+	color: $lightGrey;
+	line-height: 1.3;
+	font-size: 1.5em;
+	margin: 0;
+}
+
+
+
+/*  DEMO GROUP____________________________________ */
+.demo-group .col-item {
+	background: #e6e6e6;
+	color: $lightGrey;
+	text-align: center;
+	margin-bottom:10px;
+	line-height: 3em;
+	font-size: 1em;
+}
+
+.demo-group .demo-nested {
+	background: #f2f2f2;
+}
+
+.demo-group .demo-nested .col-item {margin-bottom: 0;}
+
+
+/* CODE EXAMPLE_____________________________________*/
+.code-example {
+	-webkit-box-shadow: inset 48px 0 0 #444;
+	-moz-box-shadow: inset 48px 0 0 #444;
+	box-shadow: inset 48px 0 0 #444;
+	background-color: $darkGrey;
+	display: block;
+	padding: .25em 1em;
+	margin: 0 0 1em;
+	font-size: 1.1em;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+}
+
+.code-example ol li {
+	line-height: 1.5;
+	color: #ffffff;
+	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
+
+.code-example ol li .comment {
+	color: $lightGrey;
+}
+
+.code-descriptor {
+	margin-bottom: 6em;
+}
+
+.code-descriptor p {
+	margin: 0 0 1.5em;
+	font-size: 1.6em;
+	line-height: 1.5;
+}
+
+
+/*  FOOTER___________________________________ */
+footer {
+	background: #f6f6f6;
+	padding: 5em 0;
+	margin-top: 6em;
+	text-align: center;
+	border-top: 5px solid $lightestGrey;
+	color: $lightGrey;
+}
+
+footer p {
+	margin: 0;
+	font-size: 1.4em;
+}
+
+footer a {
+	color: $darkGrey;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+/* ==========================================================================
+   EXPANSION A
+   ========================================================================== */
+
+
+@media screen and (min-width: 600px) {
+
+	/* 1 Column -> 2 Columns */
+	.cols-1-2 .col-item {
+		@include colItem-1to2_Break1;
+	}
+	.cols-1-2 .col-item-2 {
+		@include lastInRow;
+	}
+
+
+	/* 1 Column -> 2 Columns -> 4 Columns */
+	.cols-1-2-4 .col-item {
+		@include colItem-1to2to4_Break1;
+	}
+	.cols-1-2-4 .col-item-2,
+	.cols-1-2-4 .col-item-4 {
+		@include lastInRow;
+	}
+
+
+	/* 1 Column -> 2 Columns -> 3 Columns -> 6 Columns */
+	.cols-1-2-3-6 .col-item {
+		@include colItem-1to2to3to6_Break1;
+	}
+	.cols-1-2-3-6 .col-item-2,
+	.cols-1-2-3-6 .col-item-4,
+	.cols-1-2-3-6 .col-item-6 {
+		@include lastInRow;
+	}
+
+
+	/* 1 Column -> 2 Columns */
+	.cols-1-2-w-emph .col-item {
+		@include colItem-1to2Minor_Break1;
+	}
+	.cols-1-2-w-emph .col-item.col-major {
+		@include colItem-1to2Major_Break1;
+	}
+	.cols-1-2-w-emph .col-item-2 {
+		@include lastInRow;
+	}
+
+	/*  HERO____________________________________ */
+	.hero {
+		padding: 10em 0;
+	}
+
+	.site-header strong {
+		font-size: 8em;
+	}
+
+	.site-header-desc {
+		font-size: 1.8em;
+	}
+
+	/*  SECTIONS____________________________________ */
+	.section {
+		padding: 4em 0;
+	}
+
+	.section-head {
+		font-size: 3em;
+	}
+
+	.section-desc {
+		font-size: 1.6em;
+	}
+
+	.subsection-head {
+		font-size:2.25em;
+	}
+
+	/*  PITCH____________________________________ */
+	.the-pitch {
+		font-size: 105%;
+	}
+
+	.the-pitch .col-item {
+		margin-bottom: 0;
+	}
+	
+	/*  DEMO____________________________________ */
+	.demo-group .col-item {
+		font-size: 1.5em;
+	}
+	.demo-group .demo-nested  {
+		font-size: 1em;
+	}
+
+
+	/* CODE EXAMPLE_____________________________________*/
+	.code-example {
+		font-size: 1.3em;
+	}
+	.code-descriptor {
+		padding: 0 $gutterWidth;
+	}
+
+}
+
+/* ==========================================================================
+   EXPANSION B
+   ========================================================================== */
+
+
+@media screen and (min-width: 800px) {
+
+	/* 1 Column -> 3 Columns */
+	.cols-1-3 .col-item {
+		@include colItem-1to3_Break1;
+	}
+	.cols-1-3 .col-item-3 {
+		@include lastInRow;
+	}
+
+	/* 1 Column -> 2 Columns -> 4 Columns */
+	.cols-1-2-4 .col-item {
+		@include colItem-1to2to4_Break2;
+	}
+	.cols-1-2-4 .col-item-4 {
+		@include lastInRow;
+	}
+
+
+
+	/* 1 Column -> 2 Columns -> 3 Columns -> 6 Columns */
+	.cols-1-2-3-6 .col-item {
+		@include colItem-1to2to3to6_Break2;
+	}
+	.cols-1-2-3-6 .col-item-4 {
+		clear: left;
+	}
+	.cols-1-2-3-6 .col-item-3,
+	.cols-1-2-3-6 .col-item-6 {
+		@include lastInRow;
+	}
+
+
+
+
+	/*  HERO____________________________________ */
+	.site-header strong {
+		font-size: 10em;
+	}
+
+	.site-header-desc {
+		font-size: 2em;
+	}
+
+	.btn {
+		font-size: 2.5em;
+	}
+
+	/*  SECTIONS____________________________________ */
+	.section {
+		padding: 6em 0;
+	}
+
+	/*  PITCH____________________________________ */
+	.the-pitch {
+		font-size: 110%;
+	}
+
+	/*  DEMO____________________________________ */
+	.demo-group .col-item {
+		font-size: 2em;
+	}
+	.demo-group .demo-nested  {
+		font-size: 1em;
+	}
+
+	/* CODE EXAMPLE_____________________________________*/
+	.code-example {
+		font-size: 1.4em;
+	}
+
+	/* FOOTER_____________________________________*/
+	footer p {
+		font-size: 1.6em;
+	}
+	
+}
+
+
+/* ==========================================================================
+   EXPANSION C
+   ========================================================================== */
+
+
+@media screen and (min-width: 1000px) {
+
+
+	/* 1 Column -> 2 Columns -> 3 Columns -> 6 Columns */
+	.cols-1-2-3-6 .col-item {
+		@include colItem-1to2to3to6_Break3;
+	}
+	.cols-1-2-3-6 .col-item-4 {
+		clear: none;
+	}
+	.cols-1-2-3-6 .col-item-6 {
+		@include lastInRow;
+	}
+
+
+
+	/*  HERO____________________________________ */
+	.site-header strong {
+		font-size: 12em;
+	}
+
+	.site-header-desc {
+		font-size: 2.5em;
+	}
+
+	.btn {
+		font-size: 3em;
+	}
+
+	/*  SECTIONS____________________________________ */
+	.section {
+		padding: 6em 0;
+	}
+
+	.section-head {
+		font-size: 4em;
+	}
+
+	.section-desc {
+		font-size: 2em;
+	}
+
+	.subsection-head {
+		font-size:3em;
+	}
+
+	/*  PITCH____________________________________ */
+	.the-pitch {
+		font-size: 120%;
+	}
+
+
+
+	/*  DEMO____________________________________ */
+	.demo-group .col-item {
+		font-size: 2.5em;
+	}
+	.demo-group .demo-nested  {
+		font-size: 1em;
+	}
+
+	/* CODE EXAMPLE_____________________________________*/
+	.code-example {
+		font-size: 1.6em;
+	}
+	
+}
