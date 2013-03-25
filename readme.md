@@ -24,4 +24,5 @@ Basic HTML page showing the framework classes.
 I've only tested this in the following browsers. I'm going add backwards compatability support soon, but feel free to start using.
 - Chrome
 - Safari
+- Firefox
 - IE9 
