@@ -65,6 +65,8 @@ $secondaryDark: #b53620;
 
 body {
 	font-size: 62.5%;
+	font-family: "rooney-web",sans-serif;
+	color: $darkGrey;
 }
 
 h1,
@@ -94,7 +96,7 @@ a {
 	font-weight: bold;
 	border-bottom: 5px solid $secondaryDark;
 	padding: .5em 1em;
-	font-size: 2em;
+	font-size: 1.75em;
 	text-align:center;
 }
 .btn:hover {
@@ -128,21 +130,26 @@ a {
 
 .site-header {
 	font-size: 2em;
-	text-transform: lowercase;
+	text-transform: uppercase;
 	line-height: 1;
 	margin: 0;
+	font-family: "quatro",sans-serif;
+	color: rgba(0,0,0,.75);
 }
 
 .site-header strong {
 	display:block;
 	font-size: 4em;
 	text-transform: uppercase;
+	font-family: "quatro",sans-serif;
+	margin-top: -.05em;
 }
 
 .site-header-desc {
 	font-size:1.6em;
 	font-weight: bold;
 	margin:0;
+	text-shadow: 0 .15em 0 rgba(0,0,0,.3);
 }
 
 .contact {
@@ -150,10 +157,10 @@ a {
 	top: 12px;
 	right: 6%;
 	font-style: normal;
+	font-size:1.2em;
 }
 .contact a {
 	color: #507f74;
-	font-size: 1.2em;
 }
 
 /*  SECTIONS____________________________________ */
@@ -336,11 +343,15 @@ footer a {
 	}
 
 	.site-header strong {
-		font-size: 8em;
+		font-size: 10em;
 	}
 
 	.site-header-desc {
 		font-size: 1.8em;
+	}
+
+	.contact {
+		font-size:1.6em;
 	}
 
 	/*  SECTIONS____________________________________ */
@@ -368,6 +379,8 @@ footer a {
 	.the-pitch .col-item {
 		margin-bottom: 0;
 	}
+
+	
 	
 	/*  DEMO____________________________________ */
 	.demo-group .col-item {
@@ -384,6 +397,9 @@ footer a {
 	}
 	.code-descriptor {
 		padding: 0 $gutterWidth;
+	}
+	.code-descriptor p {
+		font-size: 1.8em;
 	}
 
 }
@@ -430,7 +446,7 @@ footer a {
 
 	/*  HERO____________________________________ */
 	.site-header strong {
-		font-size: 10em;
+		font-size: 12em;
 	}
 
 	.site-header-desc {
@@ -449,6 +465,14 @@ footer a {
 	/*  PITCH____________________________________ */
 	.the-pitch {
 		font-size: 110%;
+	}
+
+	.pitch-head {
+	font-size: 2.25em;
+	}
+
+	.the-pitch p {
+		font-size: 1.75em;
 	}
 
 	/*  DEMO____________________________________ */
@@ -495,7 +519,7 @@ footer a {
 
 	/*  HERO____________________________________ */
 	.site-header strong {
-		font-size: 12em;
+		font-size: 15em;
 	}
 
 	.site-header-desc {
@@ -516,7 +540,7 @@ footer a {
 	}
 
 	.section-desc {
-		font-size: 2em;
+		font-size: 2.25em;
 	}
 
 	.subsection-head {
@@ -541,6 +565,10 @@ footer a {
 	/* CODE EXAMPLE_____________________________________*/
 	.code-example {
 		font-size: 1.6em;
+	}
+
+	.code-descriptor p {
+		font-size: 2em;
 	}
 	
 }
