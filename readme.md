@@ -20,9 +20,8 @@ Basic HTML page showing the framework classes.
 - <a href="https://github.com/Schepp/box-sizing-polyfill">Box sizing polyfill</a>
 
 
-# WARNING
-I've only tested this in the following browsers. I'm going add backwards compatability support soon, but feel free to start using.
-- Chrome
-- Safari
-- Firefox
-- IE9 
+# Browser Support
+- Chrome 4+
+- Safari 3.1+
+- Firefox 3.5+
+- IE 8+ 
